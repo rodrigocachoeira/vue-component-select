@@ -8,21 +8,34 @@
   <body>
 
     <div class="wrapper" >
-		<div id="app" class="container">
-			<div class="starter-template">
-        		<h1>Select Component</h1>	        
-	     	</div>
+  		<div id="app" class="container">
+  			<div class="starter-template">
+          <h1>Select Component</h1>	        
+  	    </div><hr><br>
 
-      <select-component 
-        path="/src/records/persons.json" 
-        e-text="name" 
-        e-value="id" 
-        e-placeholder="Selecione uma Pessoa" 
-      >  
-      </select-component>
+        <select-component 
+          path="/src/records/persons.json"
+          e-text="name" 
+          e-value="id" 
+          e-placeholder="Selecione uma Pessoa"
+          identify-code="13"
+        >  
+        </select-component>
 
-			<!-- <select-component path="/records.html" ></select-component> -->
-		</div>
+        <br>
+
+        <select-component 
+          path="/records.html" 
+          e-text="name" 
+          e-value="id" 
+          e-placeholder="Selecione uma Pessoa"
+          receive-code="13"
+          request-on-load="false"
+        >  
+        </select-component>
+
+  			<!-- <select-component path="/records.html" ></select-component> -->
+  		</div>
     </div>
 
     <script src="/node_modules/jquery/dist/jquery.min.js"></script>
