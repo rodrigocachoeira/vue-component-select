@@ -1,0 +1,10 @@
+p.justify {
+	text-align: justify;
+	line-height: 25px;
+	text-indent: 1cm;
+}
+
+pre.unavailable {
+	opacity: 0.4;
+	cursor: not-allowed;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>vue-component-select</title>
+    <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./src/assets/css/style.css">
+  </head>
+  <body>
+
+    <!-- As a link -->
+    <nav class="navbar navbar-default">
+       <div class="container-fluid">
+         
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <a class="navbar-brand" href="#">Select Component</a>
+            <ul class="nav navbar-nav">
+              <li><a href="/">Example</a></li>
+              <li class="active"><a href="/documentation.html">Documentation <span class="sr-only">(current)</span></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+
+        </div>
+      </div>  
+    </nav>
+
+
+    <div class="wrapper" >
+  		<div id="app" class="container">
+  			<div class="starter-template">
+          <h1>Documentação</h1>	        
+  	    </div>
+        <div class="clearfix" ><hr><br></div>
+
+        <section>
+          <h4 class="page-header" >Motivação</h4>
+          <p class="justify" >O componente select foi desenvolvido para facilitar o uso do componente de Seleção do HTML, o qual é de estrema facilidade de uso, porém ao atribuir algumas interações a ele o desenvolvimento pode ficar massivo. Alguns exemplos de utilização mais complexas são iterações entre elementos, estes sejam de seleção ou outros, como por exemplo, ao seleciona um registro em um componente de seleção um componente secundário é liberado e realiza uma requisição utilizando como base a infomrmação passado do primeiro componente como filtro de consulta.</p>
+        </section>
+
+        <section>
+          <h4 class="page-header" >Utilização</h4>
+          <p>Vinculo com a instância primária do Vue JS</p>
+          <pre><span class="text-primary" >import</span> SelectComponent <span class="text-primary" >from</span> './SelectComponent.vue';<br><span class="text-warning" >Vue.component</span>('selectComponent', SelectComponent);</pre>
+          
+        </section>
+
+        <section>
+          <h4 class="page-header" >Propriedades</h4>
+          <p>O componente é baseado totalmente em propriedades, para configurá-lo corretamente algumas propriedades são essenciais.</p>
+
+          <article>
+            <h5 class="page-header" > <i class="glyphicon glyphicon-asterisk" ></i> Path: <span class="text-muted" >string</span></h5>
+            <pre><span class="text-warning" >path</span>=<span class="text-success" >"/src/records/persons.json"</span></pre>
+            <pre><span class="text-warning" >path</span>=<span class="text-success" >"/records"</span></pre>
+            <p class="justify">O atributo <strong>path</strong> indica o local que será requisitado as informações interadas no elemento HTML, as informações podem ser adquiridas de duas formas, requisitando um documento JSON ou requisitando um URL, esta que por sua vez retorna um JSON (GET, POST). O formato de resposta deve ser padrão Array[Object, Object] como no exemplo a seguir.</p>
+
+            <pre>[{
+  <span class="text-success" >"id"</span>: <span class="text-warning" >1</span>,
+  <span class="text-success" >"name"</span>: <span class="text-warning">"Rafaela"</span>,
+  <span class="text-success" >"age"</span>: <span class="text-warning">21</span>
+},
+{
+  <span class="text-success" >"id"</span>: <span class="text-warning">2</span>,
+  <span class="text-success" >"name"</span>: <span class="text-warning">"Adriano"</span>,
+  <span class="text-success" >"age"</span>: <span class="text-warning">23</span>
+}]</pre>
+          </article>
+          
+
+        <article>
+          <h5 class="page-header" > <i class="glyphicon glyphicon-asterisk" ></i> E-text <span class="text-muted" >string | array</span></h5>
+          <pre><span class="text-warning" >e-text</span>=<span class="text-success" >"name"</span></pre>
+          <pre class="unavailable" ><span class="text-warning" >e-text</span>=<span class="text-success" >['name', 'age']</span></pre>
+          <p class="justify">O atributo <strong>e-text</strong> indica qual pripriedade do objeto a ser interado será apresentado dentro do select.</p>
+        </article>
+
+        <article>
+          <h5 class="page-header" > <i class="glyphicon glyphicon-asterisk" ></i> E-value <span class="text-muted" >string</span></h5>
+          <pre><span class="text-warning" >e-value</span>=<span class="text-success" >"id"</span></pre>
+          <p class="justify">O atributo <strong>e-value</strong> indica qual pripriedade do objeto a ser interado será atribuído ao value do componente option.</p>
+        </article>
+          
+       </section>
+        
+  		</div>
+    </div>
+
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/dist/build.js"></script>
+  </body>
+</html>
